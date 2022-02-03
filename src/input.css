@@ -8,3 +8,7 @@
 .button-primary {
     @apply mt-7 p-3 bg-transparent border-2 border-yellow-400 text-slate-800 w-3/12 text-center cursor-pointer;
 }
+
+.navbar-items{
+    @apply px-2 py-1 mr-2 align-middle font-bold text-slate-100 text-lg tracking-wide cursor-pointer
+}

@@ -553,28 +553,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1.25rem;
 }
 
-.mr-2{
-  margin-right: 0.5rem;
-}
-
 .mt-5{
   margin-top: 1.25rem;
 }
 
 .ml-3{
   margin-left: 0.75rem;
-}
-
-.mr-3{
-  margin-right: 0.75rem;
-}
-
-.mt-8{
-  margin-top: 2rem;
-}
-
-.mt-20{
-  margin-top: 5rem;
 }
 
 .inline-block{
@@ -625,18 +609,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 75%;
 }
 
-.h-3\/6{
-  height: 50%;
-}
-
-.h-screen40{
-  height: 40vh;
-}
-
-.h-screen60{
-  height: 60vh;
-}
-
 .h-screen70{
   height: 70vh;
 }
@@ -681,8 +653,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2.5rem;
 }
 
-.max-w-md{
-  max-width: 28rem;
+.max-w-lg{
+  max-width: 32rem;
 }
 
 .cursor-pointer{
@@ -730,14 +702,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: transparent;
 }
 
-.bg-slate-800{
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-}
-
 .bg-slate-900{
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.bg-gradient-to-r{
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-cyan-500{
+  --tw-gradient-from: #06b6d4;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(6 182 212 / 0));
+}
+
+.to-blue-500{
+  --tw-gradient-to: #3b82f6;
 }
 
 .bg-cover{
@@ -758,16 +738,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-6{
   padding: 1.5rem;
-}
-
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.py-1{
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .py-12{
@@ -806,16 +776,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1.25rem;
 }
 
-.align-middle{
-  vertical-align: middle;
+.pt-20{
+  padding-top: 5rem;
 }
 
 .font-highlight{
   font-family: Comforter;
 }
 
+.font-mono{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
 .font-primary{
   font-family: IBM Plex Sans Thai Looped;
+}
+
+.font-sans{
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .font-secondary{
@@ -832,9 +810,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.25rem;
 }
 
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-xl{
@@ -842,14 +820,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-7xl{
   font-size: 4.5rem;
   line-height: 1;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-bold{
@@ -860,19 +843,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 600;
 }
 
+.tracking-wide{
+  letter-spacing: 0.025em;
+}
+
 .text-slate-100{
   --tw-text-opacity: 1;
   color: rgb(241 245 249 / var(--tw-text-opacity));
 }
 
-.text-yellow-500{
+.text-yellow-300{
   --tw-text-opacity: 1;
-  color: rgb(234 179 8 / var(--tw-text-opacity));
+  color: rgb(253 224 71 / var(--tw-text-opacity));
 }
 
 .text-slate-200{
   --tw-text-opacity: 1;
   color: rgb(226 232 240 / var(--tw-text-opacity));
+}
+
+.text-yellow-500{
+  --tw-text-opacity: 1;
+  color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
 .text-slate-300{
@@ -911,6 +903,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(30 41 59 / var(--tw-text-opacity));
+}
+
+.navbar-items{
+  margin-right: 0.5rem;
+  cursor: pointer;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  vertical-align: middle;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px){
