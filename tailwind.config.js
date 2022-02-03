@@ -4,7 +4,8 @@ module.exports = {
     extend: {
       fontFamily: {
         highlight: "Comforter",
-        primary: 'IBM Plex Sans Thai Looped'
+        primary: 'IBM Plex Sans Thai Looped',
+        secondary: 'Source Serif 4'
       },
       height: {
         screen10: '10vh',

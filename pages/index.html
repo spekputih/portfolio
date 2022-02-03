@@ -17,9 +17,11 @@
     <title>Afiq Syazwan's Portfolio</title>
   </head>
   <body class="max-w">
+
+    <!-- navbar -->
     <nav class="bg-transparent absolute top-0 z-10 w-screen">
       <div class="md:mx-16 md:my-5 ">
-        <div class="flex justify-between  items-center">
+        <div class="flex justify-between items-center">
           <div id="logo" class="mt-3 ml-5 font-highlight font-bold p-2 text-slate-100 text-3xl">
             Afiq Syazwan
           </div>
@@ -41,23 +43,30 @@
       </div>
       
     </nav>
+    <!-- end navbar section -->
 
-    <!-- About us -->
+    <!-- About us section -->
     <div id="about-us" class="relative bg-slate-800 h-96 pt-9 md:h-screen90">
-      <div class="md:mx-auto md:w-screen90 ">
-        <div class="flex justify-end md:mr-12">
-          <div class="h-80 w-72 md:h-5/6 md:w-5/12 bg-cover bg-center absolute top-0 mr-5 mt-5 bg-blend-multiply"
-            style="background-image: url('/dist/img/personal-photo.jpeg'); z-index: 0;"></div>
+      <div class="md:mx-auto md:w-screen70 h-full">
+        <div class="flex justify-end">
+          <div class="h-80 w-56 md:h-5/6 md:w-5/12  bg-cover bg-center absolute top-12 mr-5 mt-5 bg-blend-multiply rounded-md drop-shadow-lg shadow-slate-500"
+            style="background-image: linear-gradient(
+              rgba(0, 0, 0, 0.2), 
+              rgba(0, 0, 0, 0.2)
+            ),url('/dist/img/personal-photo.jpeg')"></div>
+            <!-- <div class="">
+              <img src="/dist/img/profile-portfolio.jpeg" alt="" class="h-80 w-72 md:h-3/6 md:w-7/12 bg-center absolute top-0 mr-5 mt-5 bg-blend-multiply rounded-md drop-shadow-lg shadow-slate-500 bg-cover right-0">
+            </div> -->
         </div>
-        <div class="mx-4 py-12 px-5 md:container md:mx-12 relative">
-          <div class="md:mx-12" style="z-index: 1;">
-            <h3 class="font-bold w-3/4 text-3xl py-3 text-slate-100 md:text-5xl">A creative web
+        <div class="mx-4 py-12 px-5 md:container md:mx-12 relative h-full">
+          <div class="grid grid-cols-1 gap-4 content-center md:mx-12 h-full">
+            <h3 class="font-bold w-3/4 text-3xl md:py-3 text-slate-100 md:text-7xl drop-shadow-lg">A creative web
               development agency</h3>
     
-            <div class=" font-bold my-3 text-sm text-yellow-500 font-primary">
+            <div class=" font-bold md:my-3 text-lg text-yellow-500 font-primary ">
               About us
             </div>
-            <div class="my-3 text-sm text-slate-100 font-primary max-w-xs py-3">
+            <div class="text-xl text-slate-100 font-primary max-w-md">
               We are rise, an award winning digital agency. we specialize in web diesgin and app development services with
               special
               care for SEO
@@ -66,20 +75,58 @@
     
         </div>
     
-        <div class="absolute bottom-0 right-0 w-3/4 hidden md:block">
-          Feature project
-          <!-- title -->
-          <div class="">Home care assistance</div>
-          <!-- discription -->
-          <div>How rise more than tripled organic traffic and generated eight</div>
-          <div>
-            view project
+        <div class="absolute -bottom-6 right-0 w-2/4 h-2/4 hidden md:block bg-transparent">
+          <div class="flex">
+          <div class="p-6 bg-slate-900 w-4/12  text-slate-100 drop-shadow-2xl">  
+            <h1 class="font-bold text-xl font-primary py-5 cursor-pointer ">Feature project <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500 inline-block ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg></span></h1>
+            <!-- title -->
+            <div class="font-bold text-2xl font-primary pt-5 pb-3">Home care assistance</div>
+            <!-- discription -->
+            <div class="font-semibold text-xl font-primary text-slate-200 pb-5">How rise more than tripled organic traffic and generated eight figure revenue for homeland</div>
+            <div class="text-xl font-primary text-slate-300">
+              view project
+            </div>
           </div>
+          
+        </div>
+          
         </div>
       </div>
     </div>
 
+    <!-- end about us section -->
 
+    <!-- start work section -->
+    <div id="work" class="mt-20">
+      <div class="flex container h-screen">
+      <!-- text -->
+        <div class="h-3/4 grid grid-cols-1 content-center w-3/6">
+            <div class="py-3 font-bold text-7xl">
+              For Forward Thinking Brands.
+            </div>
+            <div class="py-3 font-semibold text-xl text-yellow-500">
+              <div class="flex items-center">
+                <div class="border-b-2 border-yellow-500 w-10"></div>
+                <p class="ml-3">Works</p> 
+              </div>
+            </div>
+            <div class="font-secondary font-semibold text-3xl">
+              Client choose rise as thier digital partner to boost brand visibility
+            </div>
+            <div class="button-primary">See Our Works</div>
+        </div>
+
+        <!-- image -->
+        <div class="w-2/4 h-3/4 grid grid-cols-1 content-center">
+          <div class="flex justify first-letter: h-screen70">
+            <div class="w-2/4 bg-cover bg-center bg-no-repeat drop-shadow-lg p-2 m-3" style="background-image: url('/dist/img/family.jpg');"></div>
+            <div class="w-2/4 bg-cover bg-center bg-no-repeat drop-shadow-lg p-2 m-3" style="background-image: url('/dist/img/family.png');"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>
