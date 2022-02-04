@@ -12,3 +12,7 @@
 .navbar-items{
     @apply px-2 py-1 mr-2 align-middle font-bold text-lg tracking-wide cursor-pointer
 }
+
+.style-picture-2{
+    @apply bg-no-repeat bg-cover bg-center border border-slate-200 rounded-sm shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:shadow-cyan-400 hover:shadow-lg hover:border-cyan-300 hover:border-2 duration-300 cursor-pointer;
+}
