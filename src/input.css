@@ -10,7 +10,7 @@
 }
 
 .navbar-items{
-    @apply px-2 py-1 mr-2 align-middle font-bold text-lg tracking-wide cursor-pointer
+    @apply px-2 py-1 mr-2 align-middle font-bold md:text-base lg:text-lg tracking-wide cursor-pointer
 }
 
 .style-picture-2{
