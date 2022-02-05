@@ -69,12 +69,14 @@ fetch("data.json")
         const workExperience = jsondata.workExperience
         
         const workExperienceSection = document.querySelector("#work-experience");
-
-        workExperience.forEach((work)=>{
+        let show = 'hidden'
+        workExperience.forEach((work, index)=>{
             let element = document.createElement('div')
+            if(index == 0) {
+                show = 'block'
+            }
             element.innerHTML = `
-            <div id="phn-industry">
-            
+            <div id="${ work.id }" class = "${ show }">
             <!-- position -->
             <div class="font-sans font-semibold text-xl text-slate-100">
             ${work.position}
@@ -86,36 +88,44 @@ fetch("data.json")
             ${work.workingPeriod}
             </div>
             <!-- job description -->
-
-
-            <ul id='experience-list' class="font-sans font-semibold text-slate-200 text-sm text-justify">
+            <ul id='${work.id}-experience-list' class="font-sans font-semibold text-slate-200 text-sm text-justify ${ show }">
             </ul>
                 
             </div>`
             workExperienceSection.appendChild(element) 
-        })
-        const experienceListSection =document.querySelector('#experience-list')
-        let experienceLists = []
-        workExperience.forEach((el) => {
-            el.jobDescription.forEach((data)=> {
-                experienceLists.push(data)
+            
+            const experienceListSection = document.querySelector(`#${ work.id }-experience-list`)
+            
+            work.jobDescription.forEach((el, x)=>{
+                let elementChild = document.createElement('div')
+                elementChild.className = `${ show }`
+            
+                elementChild.innerHTML = `<li class="flex items-start w-full my-2 tracking-wide">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <div class="ml-3 w-9/12">${el}</div>
+                    </li>`
+                elementChild.id = `${work.id}-experience-list-${x}`
+                console.log(el, work.id, experienceListSection, elementChild)
+                
+                experienceListSection.appendChild(elementChild)
             })
-        })
-        console.log(experienceLists)
+            show = 'hidden'
+            
 
-        experienceLists.forEach(list =>{
-            let elemencChild = document.createElement('div')
-            elemencChild.innerHTML = `<li class="flex items-start w-full my-2 tracking-wide">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
-                clip-rule="evenodd" />
-            </svg>
-            <div class="ml-3 w-9/12">${list}
-            </div>
-        </li>`
-            experienceListSection.appendChild(elemencChild)
+        // experienceLists.forEach((list, index) =>{
+            
+        //     let elemencChild = document.createElement('div')
+            
+        //     elemencChild.innerHTML = 
+        //     experienceListSection.appendChild(elemencChild)
+            
+        // })
         })
+        
          
         
 
