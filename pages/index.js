@@ -24,37 +24,7 @@ document.addEventListener("scroll", function (e) {
 });
 
 
-const cenergi = document.querySelector('#cenergi-sea')
-const phn = document.querySelector('#phn-industry')
-// const cenergiButton = document.querySelector('#cenergiButton')
-// const phnButton = document.querySelector('#phnButton')
 
-const workButtons = document.querySelectorAll(".workButton")
-const workResButtons = document.querySelectorAll(".workResButton")
-
-let prevJD = document.querySelector('#iium1Button-response')
-let clickedJD
-console.log(workButtons)
-
-workButtons.forEach((el)=>{
-    el.addEventListener('click', ()=>{
-        workResButtons.forEach((res)=>{
-            // console.log(res.id.substr(0, res.id.length - 9))
-            if (res.id.substr(0, res.id.length - 9) == el.id){
-                console.log(res)
-                clickedJD = res
-            }
-        })
-        
-        if(prevJD !== clickedJD){ 
-            clickedJD.classList.remove('hidden')
-            prevJD.classList.add('hidden')
-            prevJD = clickedJD
-        }
-        
-        
-    })
-})
 
 function getElement(el){
     return document.querySelector(el)
@@ -76,7 +46,7 @@ fetch("data.json")
                 show = 'block'
             }
             element.innerHTML = `
-            <div id="${ work.id }" class = "${ show }">
+            <div id="${ work.id }" class = "${ show } workResButton">
             <!-- position -->
             <div class="font-sans font-semibold text-xl text-slate-100">
             ${work.position}
@@ -98,7 +68,7 @@ fetch("data.json")
             
             work.jobDescription.forEach((el, x)=>{
                 let elementChild = document.createElement('div')
-                elementChild.className = `${ show }`
+
             
                 elementChild.innerHTML = `<li class="flex items-start w-full my-2 tracking-wide">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -109,28 +79,52 @@ fetch("data.json")
                     <div class="ml-3 w-9/12">${el}</div>
                     </li>`
                 elementChild.id = `${work.id}-experience-list-${x}`
-                console.log(el, work.id, experienceListSection, elementChild)
+                // console.log(el, work.id, experienceListSection, elementChild)
                 
                 experienceListSection.appendChild(elementChild)
             })
             show = 'hidden'
-            
-
-        // experienceLists.forEach((list, index) =>{
-            
-        //     let elemencChild = document.createElement('div')
-            
-        //     elemencChild.innerHTML = 
-        //     experienceListSection.appendChild(elemencChild)
-            
-        // })
         })
         
-         
+        const cenergi = document.querySelector('#cenergi-sea')
+        const phn = document.querySelector('#phn-industry')
+        // const cenergiButton = document.querySelector('#cenergiButton')
+        // const phnButton = document.querySelector('#phnButton')
         
+        const workButtons = document.querySelectorAll(".workButton")
+        const workResButtons = document.querySelectorAll(".workResButton")
+        
+        let prevJD = document.querySelector('#iium1Button-response')
+        let clickedJD
+
+        console.log(workResButtons, prevJD)
+        
+        workButtons.forEach((el)=>{
+            el.addEventListener('click', ()=>{
+                workResButtons.forEach((res)=>{
+                    // console.log(res.id.substr(0, res.id.length - 9))
+                    if (res.id.substr(0, res.id.length - 9) == el.id){
+                        console.log(res)
+                        clickedJD = res
+                    }
+                })
+                
+                if(prevJD !== clickedJD){
+                    console.dir(clickedJD.childNodes[11].classList)
+                    clickedJD.classList.remove('hidden')
+                    clickedJD.childNodes[11].classList.remove('hidden')
+                    prevJD.classList.add('hidden')
+                    prevJD.childNodes[11].classList.remove('hidden')
+                    prevJD = clickedJD
+                }
+                
+                
+            })
+        })         
+
 
   });
-
+  
 
 
 
