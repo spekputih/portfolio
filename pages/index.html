@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="w-screen">
 
 <head>
   <!-- Required meta tags -->
@@ -20,16 +20,16 @@
   <title>Afiq Syazwan's Portfolio</title>
 </head>
 
-<body class="max-w">
+<body class="w-screen">
   <!-- navbar -->
   <nav class="bg-transparent top-0 z-10 w-screen fixed">
     <div class="md:mx-16 md:my-5">
       <div class="flex justify-between items-center">
         <div id="logo"
-          class="mt-3 ml-5 font-highlight font-bold p-2 text-slate-100 md:text-2xl lg:text-3xl tracking-widest drop-shadow-md">
+          class="mt-3 ml-5 font-highlight font-bold p-2 text-slate-100  md:text-2xl lg:text-3xl tracking-widest drop-shadow-md">
           Afiq Syazwan
         </div>
-        <div class="font-mono text-sm mt-3 mr-5">
+        <div class="font-mono text-sm mt-3 mr-5 hidden md:block">
           <ul id="" class="flex items-center">
             <li class="navbar-items navigationItem text-slate-100">
               <span class="text-base text-yellow-300">01.</span> About
@@ -43,16 +43,14 @@
             <li class="navbar-items navigationItem text-slate-100">
               <span class="text-base text-yellow-300">04.</span> Contact
             </li>
-
-            <li class="p-2">
-              <div class="cursor-pointer md:hidden" id="burger">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </div>
-            </li>
           </ul>
+          
+        </div>
+        <div class="cursor-pointer md:hidden" id="burger">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </div>
       </div>
     </div>
@@ -61,7 +59,7 @@
 
   <!-- Isection -->
   <div id="about-us" class="relative bg-gradient-to-r from-cyan-500 to-blue-500 h-96 pt-9 md:h-screen90">
-    <div class="md:mx-auto lg:w-screen70 md:w-screen80 h-full">
+    <div class="mx-auto lg:w-screen70 md:w-screen80 h-full">
       <div class="flex justify-end">
         <!-- <div class="h-80 w-56 md:h-5/6 md:w-5/12  bg-cover bg-center absolute top-12 mr-5 mt-5 bg-blend-multiply rounded-md drop-shadow-lg shadow-slate-500"
             style="background-image: linear-gradient(
@@ -72,24 +70,22 @@
               <img src="/dist/img/profile-portfolio.jpeg" alt="" class="h-80 w-72 md:h-3/6 md:w-7/12 bg-center absolute top-0 mr-5 mt-5 bg-blend-multiply rounded-md drop-shadow-lg shadow-slate-500 bg-cover right-0">
             </div> -->
       </div>
-      <div class="mx-4 py-12 px-5 md:container md:mx-12 relative h-full">
-        <div class="grid grid-cols-1 gap-4 content-center md:mx-12 h-full">
-          <div class="font-mono text-xl tracking-wide text-yellow-300">
+      <div class="mx-4 py-12 px-5 md:container md:mx-12 relative h-full w-full">
+        <div class="grid grid-cols-1 gap-4 content-center md:mx-12 h-full text-center md:text-left w-full align-middle justify-center">
+          <div class="font-mono text-base md:text-xl tracking-wide text-yellow-300 w-full ">
             Hi, I am
           </div>
-          <h3 class="font-bold w-3/4 md:text-5xl lg:text-7xl md:py-3 text-slate-100  drop-shadow-lg">
-            Afiq Syazwan<span class="md:text-5xl lg:text-7xl text-yellow-300">.</span>
+          <h3 class="font-bold md:w-3/4 w-full text-4xl md:text-5xl lg:text-7xl md:py-3 text-slate-100  drop-shadow-lg">
+            Afiq Syazwan<span class="text-4xl md:text-5xl lg:text-7xl text-yellow-300">.</span>
           </h3>
-          <h3 class="font-bold w-3/4 md:text-5xl md:py-3 text-slate-300 lg:text-7xl drop-shadow-lg">
+          <h3 class="font-bold md:w-3/4 w-full text-4xl md:text-5xl md:py-3 text-slate-300 lg:text-7xl drop-shadow-lg">
             I build things for the web<span class="md:text-5xl lg:text-7xl text-yellow-300">.</span>
           </h3>
           <!-- <div class=" font-bold md:my-3 text-lg text-yellow-300 font-primary ">
               About me
             </div> -->
-          <div class="md:text-base lg:text-xl text-slate-100 font-sans max-w-lg">
-            I’m a software engineer specializing in building (and occasionally
-            designing) exceptional digital experiences. Currently, I’m focused
-            on building accessible, human-centered products at Upstatement.
+          <div class="text-lg md:text-base lg:text-xl text-slate-100 font-sans w-full">
+            I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.
           </div>
         </div>
       </div>
@@ -99,17 +95,17 @@
   <!-- end introduction section -->
 
   <!-- start about me section -->
-  <div class="h-screen">
-    <div class="mx-auto lg:w-screen50 md:w-screen80 h-full">
+  <div class="h-screen w-screen">
+    <div class="mx-auto lg:w-screen70 w-screen80 h-full">
       <div class="grid grid-cols-12 gap-4 content-center h-full items-center justify-items-stretch">
-        <div class="col-span-7 space-x-4">
+        <div class="col-span-12 md:col-span-7 space-x-4 w-full mx-4">
           <div class="flex items-center justify-between">
-            <div class="font-mono text-3xl font-semibold text-slate-800 w-3/6">
-              <span class="text-2xl text-red-500">01.</span> About me
+            <div class="font-mono text-2xl md:text-3xl font-semibold text-slate-800 w-3/6">
+              <span class="text-xl md:text-2xl text-red-500">01.</span> About me
             </div>
-            <div class="w-4/6 border-t-2 border-red-500 drop-shadow-sm"></div>
+            <div class="w-4/6 border-t-2 border-red-500 drop-shadow-sm hidden md:block"></div>
           </div>
-          <div class="ml-0">
+          <div class="w-full mx-auto">
             <div class="font-sans text-base font-medium text-slate-700 w-full  mt-3 text-justify">
               Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web
               development started
@@ -134,9 +130,9 @@
             </div>
           </div>
         </div>
-        <div class="col-span-5 justify-self-center">
+        <div class="col-span-12 md:col-span-5 justify-self-center">
           <div class="w-full mx-auto">
-            <div class="ml-8 h-screen60 w-72 style-picture-2" style="background-image: url('/dist/img/sitevisit.jpg');">
+            <div class="ml-8 h-screen40 w-96 md:w-72 style-picture-2" style="background-image: url('/dist/img/sitevisit.jpg');">
             </div>
           </div>
         </div>
@@ -148,40 +144,40 @@
 
   <!-- start work experience -->
   <div class="h-screen bg-gradient-to-r from-sky-500 to-indigo-500">
-    <div class="grid grid-cols-1 place-content-center mx-auto md:w-screen40 h-full">
+    <div class="grid grid-cols-1 place-content-center mx-auto w-screen80 md:w-screen60 lg:w-screen60 h-full">
       <div class="font-sans text-3xl font-semibold text-slate-100  drop-shadow">
         <span class="text-2xl text-yellow-400 font-mono">02.</span> Where I've worked.
       </div>
-      <div class="flex h-full w-full mt-16 align-middle">
-        <div class=" w-3/12">
+      <div class="md:flex h-full w-full mt-16 align-middle">
+        <div class="md:w-3/12 flex md:block content-center mb-4">
           <div id="iium1Button"
-            class="workButton w-full border-l-4 border-yellow-400 cursor-pointer hover:bg-slate-100">
+            class="workButton w-full md:border-l-4 border-t-4 md:border-t-0  border-yellow-400 cursor-pointer hover:bg-slate-100">
             <div class="p-3 font-primary font-bold text-slate-100 hover:text-slate-800 tracking-wider">
               IIUM
             </div>
           </div>
-          <div id="alegionButton" class="workButton w-full border-l-4 cursor-pointer hover:bg-slate-100">
+          <div id="alegionButton" class="workButton w-full md:border-l-4 border-t-4 md:border-t-0 cursor-pointer hover:bg-slate-100">
             <div class="p-3 font-primary  text-slate-100 hover:text-slate-800">
               Alegion Sdn Bhd
             </div>
           </div>
-          <div id="phnButton" class=" workButton w-full border-l-4 cursor-pointer hover:bg-slate-100">
+          <div id="phnButton" class=" workButton w-full md:border-l-4 border-t-4 md:border-t-0 cursor-pointer hover:bg-slate-100">
             <div class="p-3 font-primary  text-slate-100 hover:text-slate-800">
               PHN Industry
             </div>
           </div>
-          <div id="iium2Button" class="workButton w-full border-l-4 cursor-pointer hover:bg-slate-100">
+          <div id="iium2Button" class="workButton w-full md:border-l-4 border-t-4 md:border-t-0 cursor-pointer hover:bg-slate-100">
             <div class="p-3 font-primary  text-slate-100 hover:text-slate-800">
               IIUM
             </div>
           </div>
-          <div id="cenergiButton" class="workButton w-full border-l-4 cursor-pointer hover:bg-slate-100">
+          <div id="cenergiButton" class="workButton w-full md:border-l-4 border-t-4 md:border-t-0 cursor-pointer hover:bg-slate-100">
             <div class="p-3 font-primary  text-slate-100 hover:text-slate-800">
               Cenergi SEA
             </div>
           </div>
         </div>
-        <div id="work-experience" class="w-9/12 ml-8">
+        <div id="work-experience" class="w-full md:w-9/12 md:ml-8">
         </div>
       </div>
     </div>
@@ -193,7 +189,7 @@
     <div class="md:w-screen80 lg:w-screen50 mx-auto lg:py-28">
       <div class="grid grid-cols-12 justify-items-stretch h-full gap-y-4 content-center">
         <!-- project main title -->
-        <div class="col-span-12 font-sans text-3xl font-bold text-slate-700 w-3/6 drop-shadow">
+        <div class="col-span-12 font-sans text-3xl font-bold text-slate-700 drop-shadow">
           <span class="font-mono text-2xl text-red-500">03.</span> Some things I've built
         </div>
         <!-- project list start -->
@@ -312,9 +308,9 @@
 
   <!-- other noteworthy projects section -->
   <div >
-    <div class="lg:w-screen50 mx-auto">
-      <div class="grid grid-cols-3 gap-1 items-stretch">
-        <div class="p-3 w-full text-white col-span-3 text-center space-y-5">
+    <div class="w-screen70 lg:w-screen50 mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 items-stretch">
+        <div class="p-3 w-full text-white col-span-1 md:col-span-2 lg:col-span-3 text-center space-y-5">
           <div class="w-full font-sans text-3xl text-slate-800 font-bold drop-shadow-sm">
             Other Noteworthy Projects.
           </div>
@@ -393,27 +389,28 @@
 
   <!-- start work list section -->
   <div id="work" class="">
-    <div class="flex container h-screen pt-20">
+    <div class="flex container h-screen70 md:h-screen pt-20">
       <!-- text -->
-      <div class="h-3/4 grid grid-cols-1 content-center w-3/6">
-        <div class="py-3 font-bold text-7xl">
+      <div class="h-3/4 grid grid-cols-1 content-center md:w-3/6">
+        <div class="py-3 font-bold text-4xl md:text-5xl lg:text-7xl md:text-left text-center">
           For Forward Thinking Brands.
         </div>
-        <div class="py-3 font-semibold text-xl text-yellow-500">
+        <div class="py-3 font-semibold text-xl text-yellow-500 w-full">
           <div class="flex items-center">
-            <div class="border-b-2 border-yellow-500 w-10"></div>
-            <p class="ml-3">Works</p>
+            <div class="border-b-2 border-yellow-500 w-10 hidden md:block text-center "></div>
+            <p class="md:ml-3 w-full md:text-left text-center">Works</p>
           </div>
         </div>
-        <div class="font-secondary font-semibold text-3xl">
+        <div class="font-secondary font-semibold text-3xl text-center">
           Client choose rise as thier digital partner to boost brand
           visibility
         </div>
-        <div class="button-primary">See Our Works</div>
+        <div class="button-primary text-center">See Our Works</div>
       </div>
 
       <!-- image -->
-      <div class="w-2/4 h-3/4 grid grid-cols-1 content-center">
+      
+      <div class="md:w-2/4 md:h-3/4 md:grid md:grid-cols-1 content-center hidden">
         <div class="flex justify first-letter: h-screen70">
           <div class="w-2/4 bg-cover bg-center bg-no-repeat drop-shadow-lg p-2 m-3"
             style="background-image: url('/dist/img/family.jpg')"></div>
@@ -426,7 +423,7 @@
 
   <!-- what's next section -->
   <div class="lg:w-screen40 mx-auto lg:h-screen60">
-    <div>
+    <div class="pb-6">
       <div>
         <div class="col-span-12 font-sans text-3xl font-bold text-slate-700 w-full mx-auto text-center drop-shadow">
           <span class="font-mono text-2xl text-red-500">04.</span> What's Next?
@@ -438,7 +435,7 @@
           Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
         </div>
         <div class=" col-span-12 font-sans lg:text-xl font-semibold text-red-500 mx-auto text-center drop-shadow lg:mt-16">
-          <p class="cursor-pointer bg-transparent py-4 px-5 border-2 border-red-500 w-3/12 mx-auto rounded-md shadow-lg hover:shadow-xl transition-shadow ease-in-out"> Say Hello! </p>
+          <p class="cursor-pointer bg-transparent py-4 px-4 border-2 border-red-500 w-3/12 mx-auto rounded-md shadow-lg hover:shadow-xl transition-shadow ease-in-out"> Say Hello! </p>
         </div>
       </div>
     </div>
